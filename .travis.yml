@@ -24,3 +24,4 @@ deploy:
    default: true
    keyfile: client-secret.json
    branch: managed_vms_travis
+   edge: true
