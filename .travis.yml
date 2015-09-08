@@ -6,7 +6,8 @@ cache:
 env:
 - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin PYTHONPATH=${HOME}/gcloud/google-cloud-sdk/platform/google_appengine
 before_install:
-- openssl aes-256-cbc -K $encrypted_40ce2f227d45_key -iv $encrypted_40ce2f227d45_iv -in credentials.tar.gz.enc -out credentials.tar.gz -d
+- openssl aes-256-cbc -K $encrypted_40ce2f227d45_key -iv $encrypted_40ce2f227d45_iv
+  -in credentials.tar.gz.enc -out credentials.tar.gz -d
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
@@ -19,10 +20,9 @@ install:
 script:
 - echo "success"
 deploy:
-   provider: gae
-   docker_build: local
-   default: true
-   keyfile: client-secret.json
-   branch: managed_vms_travis
-   edge: true
-   project: my-travis-demo-1055
+  provider: gae
+  docker_build: local
+  default: true
+  keyfile: client-secret.json
+  edge: true
+  project: continuous-deployment-python
