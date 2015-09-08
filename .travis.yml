@@ -23,3 +23,4 @@ deploy:
    docker_build: local
    default: true
    keyfile: client-secret.json
+   branch: managed_vms_travis
