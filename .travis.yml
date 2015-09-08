@@ -25,4 +25,4 @@ deploy:
    keyfile: client-secret.json
    branch: managed_vms_travis
    edge: true
-   project: my-travis-demo
+   project: my-travis-demo-1055
