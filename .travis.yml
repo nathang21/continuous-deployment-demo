@@ -21,7 +21,6 @@ script:
 - echo "success"
 deploy:
   provider: gae
-  docker_build: local
   default: true
   keyfile: client-secret.json
   edge: true
