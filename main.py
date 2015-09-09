@@ -18,6 +18,10 @@ app = Flask(__name__)
 
 from api_key import key
 
+@app.route('/test')
+def get_test():
+    return "testing worked"
+
 @app.route('/get_author/<title>')
 def get_author(title):
     host = 'https://www.googleapis.com/books/v1/volumes?q={}&key={}&country=US'.format(title, key)

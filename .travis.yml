@@ -29,6 +29,6 @@ deploy:
     provider: gae
     keyfile: client-secret.json
     project: continuous-deployment-python
-    version: test
+    default: true
     on:
       all_branches: true
