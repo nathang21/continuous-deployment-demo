@@ -29,4 +29,4 @@ deploy:
     keyfile: client-secret.json
     project: continuous-deployment-python
     version: test
-    branch: appengine
+    all_branches: true
