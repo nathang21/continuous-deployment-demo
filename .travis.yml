@@ -29,4 +29,5 @@ deploy:
     keyfile: client-secret.json
     project: continuous-deployment-python
     version: test
-    all_branches: true
+    on:
+      all_branches: true
