@@ -20,7 +20,7 @@ def health_check():
 
 @app.route('/get_author/<title>')
 def get_author(title):
-    host = 'https://www.googleapis.com/books/v1/volumes?q={}&key={}&country=US'.format(title, key)
+    host = 'https://www.googleapis.com/books/v1/volume?q={}&key={}&country=US'.format(title, key)
     print "host %s" % host
     request = urllib2.Request(host)
     try:
